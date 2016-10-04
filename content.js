@@ -58,7 +58,6 @@ $(window).load(function(){
 	function main(){
 		if ( $('.tab-presidency').hasClass("tab-is-active") == true ) {
 			var model = getModel();
-			console.log(model);
 			var states = window.race['summary'];
 			var probs = {}
 			for (var i = 0 ; i <= states.length - 1; i++) {
@@ -68,8 +67,6 @@ $(window).load(function(){
 				prob = prob - 50;
 				prob = prob.toString().charAt(0);
 				probs[s.state] = prob;
-				console.log(s.state);
-				console.log(s.sentences[model].party);
 				if (s.sentences[model].party == "D") {
 
 					$('path.state.'+s.state).on("mouseenter.shimmy", function () {
